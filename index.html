@@ -8,16 +8,16 @@
     function profileActivation(profile, reason) {
      // let results;
        if (profile.active === true){
-        if (profile.reason === undefined){
+       if (reason === undefined){
          return 'confirm status manually'
          } else{
         profile.active = false 
         profile.reason = reason
-       } }else if (profile.active === false){
+       } } else if (profile.active === false){
         profile.active = true 
         delete profile.reason 
       }
-       return profile
+      return profile
     }
 
     // 👉 CHALLENGE 2
